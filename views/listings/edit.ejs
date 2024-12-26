@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<div class="row"></div>
+  <div class="col-8 offset-2">
+    <h2>Edit Your Listing</h2>
+    <form action="/listings/<%= listing._id %>?_method=PUT" method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
+
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input value="<%= listing.title %>" id="title" class="form-control" type="text" name="listing[title]" placeholder="Add a Catchy Title" required>
+      </div>
+      
+      
+      <div class="mb-3">
+        Original Image <br>
+        <img class="prev-img" src="<%= listing.image.url.replace("/upload", "/upload/h_150") %>" alt="Image" />
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload New Image</label>
+        <input id="image" class="form-control" type="file" name="listing[image]" placeholder="Image Url">
+      </div>
+      
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea id="description" class="form-control" type="text" name="listing[description]" placeholder="Write about your place" required><%= listing.description %></textarea>
+      </div>
+      <div class="row">
+        <div class="col-md-5 mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input value="<%= listing.price %>" id="price" class="form-control" type="number" name="listing[price]" placeholder="Price Per Night" required>
+        </div>
+        <div class="col-md-7 mb-3">
+          <label for="country" class="form-label">Country</label>
+          <input value="<%= listing.country %>" id="country" class="form-control" type="text" name="listing[country]" placeholder="Country" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input value="<%= listing.location %>" id="location" class="form-control" type="text" name="listing[location]" placeholder="Location" required>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary me-5">Update</button>
+      </div>
+
+    </form>
+  </div>  
+</div>

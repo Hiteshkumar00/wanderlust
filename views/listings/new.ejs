@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<div class="row">
+  <div class="col-8 offset-2">
+    <h2>Create New Listing</h2>
+    <form action="/listings" method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
+
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input id="title" class="form-control" type="text" name="listing[title]" placeholder="Add a Catchy Title" required>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input id="image" class="form-control" type="file" name="listing[image]" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea id="description" class="form-control" type="text" name="listing[description]" placeholder="Write about your place" required></textarea>
+      </div>
+      <div class="row">
+        <div class="col-md-5 mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input id="price" class="form-control" type="number" name="listing[price]" placeholder="Price Per Night" required>
+        </div>
+        <div class="col-md-7 mb-3">
+          <label for="country" class="form-label">Country</label>
+          <input id="country" class="form-control" type="text" name="listing[country]" placeholder="Country" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input id="location" class="form-control" type="text" name="listing[location]" placeholder="Location" required>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-success me-5">Create</button>
+        <button type="reset" class="btn btn-danger">Reset</button>
+      </div>
+
+    </form>
+  </div>  
+</div>
+

@@ -1,0 +1,153 @@
+body{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+  flex: 1;
+}
+
+/* navbar */
+
+.navbar{
+  /* height: 4rem; */
+  background-color: white;
+}
+.navbar-nav{
+  background-color: white;
+}
+
+.navbar-brand{
+  color: #fe424d !important;
+  font-size: 1.5rem;
+}
+.navbar-brand i{
+  font-size: 2rem;
+}
+
+.nav-link{
+  font-size: 1.2rem;
+}
+
+.nav-link:hover{
+  color: black;
+}
+/* footer */
+
+.rm_u{
+  text-decoration: none;
+  color: #222222;
+  margin: 0 0.3rem;
+}
+
+.f-info-links a{
+  color: #222222;
+}
+
+.f-info-links a:hover{
+  text-decoration: underline;
+}
+
+.f-info{
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  background-color: #ebebed;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.f-info div{
+  text-align: center;
+}
+
+
+.f-info-socials a{
+  font-size: 1.2rem;
+}
+
+
+/* card-style */
+
+.card-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.card-listing{
+  border: none;
+  margin: 1rem 0;
+  width: 18rem;
+}
+
+.listing-img{
+  border-radius: 1rem;
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.card-body{
+  padding: 0;
+}
+
+.card-text-listing{
+  font-weight: 500;
+}
+
+.card-container a{
+  text-decoration: none;
+}
+
+/* cards effects */
+
+.card-img-overlay{
+  opacity: 0;
+}
+
+.card-img-overlay:hover{
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* show page  */
+
+.show-img{
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.card-show{
+  border: none;
+}
+
+.card-text-show{
+  font-weight: 500;
+}
+
+.delete-btn{
+  display: inline-block;
+}
+
+
+/* for all form type btn */
+.btn-form{
+  display: inline-block;
+}
+
+h2{
+  text-align: center;
+}
+
+.prev-img{
+  height: 8rem;
+  border-radius: .5rem;
+}
